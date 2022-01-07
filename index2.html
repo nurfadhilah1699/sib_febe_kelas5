@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buit-in class kuis</title>
+</head>
+<body>
+    <script>
+        class Animal {
+            constructor(name, age, isMammal) {
+                this.name = name;
+                this.age = age;
+                this.isMammal = isMammal;
+            }
+
+        }
+
+        class Rabbit extends Animal {
+            constructor(name, age, isMammal) {
+                super(name, age, true);
+            }
+            eat() {
+                return `${this.name} sedang makan!`;
+            }
+        }
+
+        class Eagle extends Animal {
+            constructor(name, age, isMammal) {
+                super(name, age, false);
+            }
+            fly() {
+                return `${this.name} sedang terbang!`;
+            }
+        }
+
+        const myRabbit = new Rabbit("Labi", 2);
+        const myEagle = new Eagle("Elo", 4);
+        myRabbit.eat();
+        myEagle.fly();
+
+    </script>
+</body>
+</html>
